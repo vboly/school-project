@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ec0000;
+}
+#color{
+  color: #1097ff;
+}
+
+.highlight:hover {
+  background-color: #1097ff;
+}
+div p {
+    background-color: #ff00b3;
+}
+
+a[href="https://www.google.com"]
+{
+  color: #00f593;
+}
+p::first-line {
+  font-weight: bold;
+}
