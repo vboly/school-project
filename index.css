@@ -1,6 +1,9 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #ec0000;
+  margin: 0;
+  padding: 40px 0;
+  background: linear-gradient(135deg, #ec0000 0%, #ffb347 100%);
 }
 #color{
   color: #1097ff;
@@ -9,8 +12,17 @@ body {
 .highlight:hover {
   background-color: #1097ff;
 }
+
 div p {
-    background-color: #ff00b3;
+  background-color: #ff00b3;
+  margin: 16px 0;
+  padding: 12px 18px;
+  border-radius: 6px;
+}
+
+p {
+  margin-bottom: 18px;
+  line-height: 1.6;
 }
 
 a[href="https://www.google.com"]
