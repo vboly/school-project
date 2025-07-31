@@ -25,6 +25,11 @@ p {
   line-height: 1.6;
 }
 
+img {
+ border: 5px solid #00f593;
+ padding: 10px;
+}
+
 a[href="https://www.google.com"]
 {
   color: #00f593;
