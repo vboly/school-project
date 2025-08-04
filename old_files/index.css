@@ -28,6 +28,9 @@ p {
 img {
  border: 5px solid #00f593;
  padding: 10px;
+ max-width: 100%;
+ height: auto;
+ width: auto;
 }
 
 a[href="https://www.google.com"]
@@ -36,4 +39,26 @@ a[href="https://www.google.com"]
 }
 p::first-line {
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(90deg, #ffb347 0%, #ec0000 100%);
+  }
+  div p {
+    margin: 10px 0;
+  }
+  img {
+    border: none;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+  div p {
+    padding: 10px;
+  }
 }
