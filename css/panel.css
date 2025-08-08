@@ -1,0 +1,125 @@
+.login-box {
+  background-color: rgba(255,255,255,255);
+  padding: 2rem; 
+  border-radius: 1rem; 
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  width: 100%;
+  max-width: 40rem;
+  margin: auto;
+  min-height: 20rem;
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  pointer-events: auto;
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-box {
+  background-color: white;
+  padding: 2rem; 
+  border-radius: 1rem; 
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  width: 100%;
+  max-width: 1rem;
+  max-height: 1rem;
+  display: inline-flex;
+  justify-content: center; 
+  align-items: center; 
+  pointer-events: none;
+}
+
+body {
+  min-height: 85vh; 
+}
+
+img {
+  width: 300%;
+  height: 300%;
+  max-width: 20rem; 
+  max-height: 20rem; 
+  display: inline-block;
+}
+
+.login-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255,255,255,255);
+    z-index: -1; 
+    padding-top: 2rem;
+}
+
+.welcome-frame {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #ff8447;
+    z-index: -1;
+}
+
+/* background glow effect */
+
+.bg_glow {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    top: 70%;
+    left: 50%;
+    background-color: rgba(255,139,47,255);
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: -2;
+}
+
+.bg_glow2 {
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    top: -20%;
+    left: 0%;
+    background-color: #f85300;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: -1;
+}
+
+@media (max-width: 750px) {
+    .login-box {
+        width: 90%;
+        max-width: 40rem;
+        padding: 1rem;
+        margin: 0 auto; 
+         display: inline-flex;
+    }
+   
+    .logo-box {
+        max-width: 2rem;
+        max-height: 2rem;
+        
+    }
+    
+    img {
+        max-width: 200%;
+        max-height: 200%;
+    }
+    
+    .welcome-frame {
+        visibility: hidden;
+    }
+
+    .login-frame {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .bg_glow, .bg_glow2 {
+        width: 80%;
+        height: 60%;
+    }
+}
