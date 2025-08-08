@@ -1,8 +1,4 @@
-body {
-  min-height: 85vh; 
-}
-
-.store-box {
+.editor-box {
   background-color: rgba(255,255,255,255);
   padding: 2rem; 
   border-radius: 1rem; 
@@ -18,18 +14,18 @@ body {
   z-index: 2;
   overflow: hidden;
   position: relative;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 20px; 
 }
 
 @media (max-width: 750px) {
-    .store-box {
+    .editor-box {
         width: 90%;
         max-width: 40rem;
         padding: 1rem;
         margin: 0 auto; 
         display: inline-flex;
     }
+}
+
+body {
+  min-height: 85vh; 
 }
