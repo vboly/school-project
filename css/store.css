@@ -10,18 +10,13 @@ body {
   width: 100%;
   max-width: 40rem;
   margin: auto;
-  min-height: 20rem;
+  min-height: 21.5rem;
   display: flex; 
   flex-direction: column;
   align-items: center; 
   pointer-events: auto;
   z-index: 2;
-  overflow: hidden;
   position: relative;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 20px; 
 }
 
 @media (max-width: 750px) {

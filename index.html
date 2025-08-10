@@ -7,30 +7,37 @@
     <div id="particles-js"></div>
     <script src="js/lib/particles.js"></script>
     <script src="js/app.js"></script>  
+    <script src="js/panel.js"></script>
     <!-- body-->
     <body>
         <!-- navigation -->
         <nav>
-            <a class="active">Panel</a>
-            <a href="store.html">Store</a>
-            <a href="editor.html">Editor</a>
+            <a class="active"     id="nav-panel">Panel</a>
+            <a href="store.html"  id="nav-store">Store</a>
+            <a href="editor.html" id="nav-editor">Editor</a>
         </nav>
         <!--login-->
-         <div class="login-box">
+        <div class="login-box" id = "login-box">
             <div class="login-frame">
                 <!-- logo -->
                 <div class="logo-box">
                     <img src="assets/logo.png" alt="Logo"> 
                 </div>
                 <!-- login forum -->
+                <h1></h1>
                 <input type="text" placeholder="Username" required>
                 <input type="password" placeholder="Password" required>
-                <button class="login-but" type="submit">Login</button>
+                <h1></h1>
+                <button class="login-but" type="submit" id ="log-but">Login</button>
             </div>
-            <!-- welcome info-->
+           <!-- welcome info-->
            <div class="welcome-frame">
-
+               <p style="font-size: 24px;" id ="welcome-top">Please login to continue</p>
+               <p style="font-size: 14px;" id="welcome-bottom">Don't have an account? <a id="signup-link">Sign up now!</a></p>
            </div>
         </div>
+         <nav>
+           <p>© Copyright 2025 Example Softworks All rights reserved.</p>
+        </nav>
     </body>
 </html>
