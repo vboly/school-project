@@ -115,3 +115,20 @@ particlesJS("particles-js", {
   "retina_detect": true,
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('nav');
+  const active = document.querySelector('a.active');
+  
+  nav.addEventListener('mouseover', (event) => {
+    if (event.target.tagName === 'A' && event.target !== active) {   
+        active.classList.remove('active');
+      }
+  });
+
+  nav.addEventListener('mouseout', (event) => {
+    if (!active.classList.contains('active')) {   
+        active.classList.add('active');
+      }
+  });
+
+});

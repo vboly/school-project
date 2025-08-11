@@ -20,21 +20,17 @@
 }
 
 .editor-con {
-  background-color: rgba(255,255,255,255);
-  padding: 2rem; 
+  background-color: rgba(30, 30, 30,255);
   border-radius: 1rem; 
   box-shadow: 0 8px 32px rgba(0,0,0,0.14);
   width: 90%;
-  margin: auto;
-  min-height: 13rem;
-  display: flex; 
-  flex-direction: column;
+  min-height: 18rem;
   align-items: center; 
   pointer-events: auto;
   z-index: 2;
   overflow: hidden;
   position: relative;
-  
+  text-align: left;
 }
 
 .editornav-frame {
@@ -55,18 +51,32 @@
 }
 
 button {
-  background-color: rgba(255,255,255,255);
+  font-family: 'Noto Sans Thai UI', Arial, sans-serif;
+  background-color: #ff8447;
+  color: #fff;              
+  font-weight: 700;         
+  padding: 0.75rem 2rem;    
+  border-radius: 9999px;  
+  width: 100%;  
+  max-width: 6.5rem; 
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   border: none;
-  padding: 1rem; 
-  position: relative;
-  border-radius: 1rem; 
-  width: 100%;
-  max-width: 56px;
-  max-height: 56px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; 
+}
+    
+button:hover {
+  animation: pulse-bg 0.5s ease-in-out;
+}
+
+@keyframes pulse-bg {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+         transform: scale(1.05);
+     }
 }
 
 img {
@@ -78,13 +88,16 @@ img {
 } 
 
 @media (max-width: 750px) {
-    .editor-box {
-        width: 90%;
-        max-width: 40rem;
-        padding: 1rem;
-        margin: 0 auto; 
-        display: inline-flex;
-    }
+  .editor-box {
+    width: 80%;
+    max-width: 40rem;
+    padding: 2rem;
+    margin: 0 auto; 
+  }
+}
+
+@media (max-width: 450px) {
+  
 }
 
 body {
