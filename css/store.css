@@ -15,11 +15,13 @@ body {
   align-items: center; 
   pointer-events: auto;
   z-index: 2;
-  overflow: hidden;
+  overflow-y: scroll;
   position: relative;
   flex-direction: column;
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-auto-flow: row;
+  place-items: center;
+  gap: 2rem;
   backdrop-filter: blur(4px);
   scroll-behavior: smooth;
 }
@@ -112,7 +114,7 @@ button:hover {
 @keyframes pulse-bg {
     0%, 100% {
         transform: scale(1);
-    }
+    } 
     50% {
          transform: scale(1.05);
     }
@@ -125,4 +127,27 @@ button:hover {
     padding: 2rem;
     margin: 0 auto; 
   }
+}
+
+@media (max-width: 630px) {
+  
+  .store-item {
+    flex-direction: column;
+    align-items: center;
+    max-height: none;
+  }
+  
+  .item-details {
+    text-align: center;
+    max-width: none; 
+  }
+  
+  .item-details h3 {
+    font-size: 1.1rem;
+  }
+  
+  .item-details p {
+    font-size: 0.85rem;
+  }
+ 
 }
