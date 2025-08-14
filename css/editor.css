@@ -97,9 +97,28 @@ img {
 }
 
 @media (max-width: 450px) {
+  .editor-box {
+    gap: 0rem;
+  }
+
+  .editor-con {
+    min-height: 15rem;
+  }
+
+  .editornav-frame {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    justify-items: center;
+    max-width: 6rem;
+    min-height: 3.5rem;
+  }
   
+  body {
+    overflow-y: scroll;
+  }
 }
 
 body {
   min-height: 85vh; 
-}
+} 

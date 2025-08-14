@@ -17,9 +17,9 @@ body {
   z-index: 2;
   overflow-y: scroll;
   position: relative;
-  flex-direction: column;
   display: grid;
   grid-auto-flow: row;
+  grid-template-columns: 1fr;
   place-items: center;
   gap: 2rem;
   backdrop-filter: blur(4px);
@@ -131,6 +131,10 @@ button:hover {
 
 @media (max-width: 630px) {
   
+  .store-box {
+    gap: 4rem;
+  }
+
   .store-item {
     flex-direction: column;
     align-items: center;
