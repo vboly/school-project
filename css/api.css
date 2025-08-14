@@ -1,0 +1,110 @@
+body {
+  min-height: 85vh; 
+}
+
+.api-box {
+  background-color: rgba(250,250,250,0.2);
+  padding: 2rem; 
+  border-radius: 1rem; 
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  width: 100%;
+  max-width: 40rem;
+  margin: auto;
+  min-height: 21.5rem;
+  max-height: 21.5rem;
+  align-items: center; 
+  pointer-events: auto;
+  z-index: 2;
+  overflow-y: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem; 
+  backdrop-filter: blur(4px);
+  scroll-behavior: smooth;
+}
+
+.api-tabs {
+  background-color: rgba(250,250,250,0.2);
+  padding: 2rem; 
+  border-radius: 1rem; 
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.5rem;
+  
+
+  min-width: 20%;
+}
+
+.api-tabs button {
+  background-color: rgba(250,250,250,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  border: rgba(230,230,230,255) 1px solid;
+  color: rgba(92, 92, 92, 255);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.2s;
+  font-family: 'Noto Sans Thai UI', Arial, sans-serif;
+  display: inline-block;
+  padding: 4px 0 4px 12px; 
+  position: relative;
+  text-align: left; 
+  width: 100%;
+}
+
+.api-tabs button::after {
+  content: "";
+  display: block;
+  width: 3px; 
+  height: 0; 
+  background: rgba(255, 139, 47, 255);
+  border-radius: 2px;
+  position: absolute;
+  left: 0; 
+  top: 0;
+  transition: height 0.3s; 
+}
+
+.api-tabs button.active {
+    color: rgba(27,27,27,255);
+}
+.api-tabs button:hover {
+    color: rgba(27,27,27,255);
+}
+
+.api-tabs button.active:hover {
+    color: rgba(92,92,92,255);
+}
+
+
+.api-tabs button:hover::after,
+.api-tabs button:focus::after {
+    height: 100%;
+    width: 2%;
+}
+
+.api-tabs button.active::after {
+    height: 100%; 
+}
+        
+.api-tabs button.active:hover::after,
+.api-tabs button.active:focus::after {
+    height: 0%;
+    width: 0%;
+}
+
+.api-content {
+   background-color: rgba(250,250,250,0.2);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+    width: auto;
+    min-height: 18rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; 
+}

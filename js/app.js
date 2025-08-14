@@ -130,5 +130,4 @@ document.addEventListener('DOMContentLoaded', () => {
         active.classList.add('active');
       }
   });
-
 });

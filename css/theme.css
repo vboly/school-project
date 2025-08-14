@@ -15,6 +15,18 @@ nav {
   z-index: 2; 
 }
 
+h2 {
+  color: rgba(92,92,92,255);
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: bold;
+  font-size: 24px;
+  transition: color 0.2s;
+  font-family: 'Noto Sans Thai UI', Arial, sans-serif;
+  padding-bottom: 4px;  
+  position: relative;
+}
+
 p {
   color: rgba(92,92,92,255);
   text-decoration: none;
@@ -63,16 +75,16 @@ nav a:hover {
 }
 
 nav a::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 3px;
-    background: rgba(255,139,47,255);
-    border-radius: 2px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transition: width 0.3s;
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: rgba(255,139,47,255);
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s;
 }
 
 nav a:hover::after,
