@@ -131,3 +131,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const musicplr = document.getElementById('musicplr');
+  const EnterBox = document.getElementById('EnterBox')
+
+    if(localStorage.getItem('Entered') === 'true') {
+      EnterBox.style.display = 'none';
+      EnterBox.style.visibility = 'hidden';
+    }
+
+    EnterBox.addEventListener('click', (event) => {
+      EnterBox.style.display = 'none';
+      EnterBox.style.visibility = 'hidden';
+      musicplr.play()
+      localStorage.setItem('Entered', 'true');
+    });
+});

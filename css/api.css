@@ -34,9 +34,11 @@ body {
   flex-direction: column;
   align-items: left;
   gap: 0.5rem;
-  
-
   min-width: 20%;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
 }
 
 .api-tabs button {
