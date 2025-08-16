@@ -39,6 +39,7 @@ h2 {
   transition: color 0.2s;
   font-family: 'Noto Sans Thai UI', Arial, sans-serif;
   padding-bottom: 4px;  
+  margin:  4px 18px;
   position: relative;
 }
 

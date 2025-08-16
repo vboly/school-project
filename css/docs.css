@@ -2,7 +2,7 @@ body {
   min-height: 85vh; 
 }
 
-.api-box {
+.DOCS-box {
   background-color: rgba(250,250,250,0.2);
   padding: 2rem; 
   border-radius: 1rem; 
@@ -24,7 +24,7 @@ body {
   scroll-behavior: smooth;
 }
 
-.api-tabs {
+.DOCS-tabs {
   background-color: rgba(250,250,250,0.2);
   padding: 2rem; 
   border-radius: 1rem; 
@@ -41,10 +41,10 @@ h2 {
     font-family: "Roboto", sans-serif;
 }
 
-.api-tabs button {
+.DOCS-tabs button {
   background-color: rgba(250,250,250,0.2);
   box-shadow: 0 8px 32px rgba(0,0,0,0.14);
-  border: rgba(230,230,230,255) 1px solid;
+    border: rgba(230,230,230,255) 1px solid;
   color: rgba(92, 92, 92, 255);
   text-decoration: none;
   font-weight: bold;
@@ -58,7 +58,7 @@ h2 {
   width: 100%;
 }
 
-.api-tabs button::after {
+.DOCS-tabs button::after {
   content: "";
   display: block;
   width: 3px; 
@@ -71,42 +71,77 @@ h2 {
   transition: height 0.3s; 
 }
 
-.api-tabs button.active {
-    color: rgba(27,27,27,255);
-}
-.api-tabs button:hover {
-    color: rgba(27,27,27,255);
+.DOCS-tabs button.active {
+  height: 100%; 
+  color: rgba(27,27,27,255);
 }
 
-.api-tabs button.active:hover {
-    color: rgba(92,92,92,255);
+.DOCS-tabs button:hover {
+  height: 0%; 
+  color: rgba(27,27,27,255);
 }
 
-
-.api-tabs button:hover::after,
-.api-tabs button:focus::after {
-    height: 100%;
-    width: 2%;
+.DOCS-tabs button:hover::after {
+  height: 100%;
+  width: 2%;
+  color: rgba(27,27,27,255);
 }
 
-.api-tabs button.active::after {
-    height: 100%; 
+.DOCS-tabs button.active::after {
+  height: 100%; 
+  color: rgba(27,27,27,255);
 }
         
-.api-tabs button.active:hover::after,
-.api-tabs button.active:focus::after {
-    height: 0%;
-    width: 0%;
+.DOCS-tabs button:hover::after,
+.DOCS-tabs button.active::after {
+  height: 100%;
 }
 
-.api-content {
-   background-color: rgba(250,250,250,0.2);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.14);
-    width: auto;
-    min-height: 18rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column; 
+.DOCS-content {
+  background-color: rgba(250,250,250,0.2);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  width: auto;
+  min-height: 18rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; 
+  max-height: 21px;
+  overflow-y: scroll;
+}
+
+.DOCS-content h2 {
+  text-align: left
+}
+
+.DOCS-content p {
+  text-align: left
+}
+
+@media (max-width: 750px) {
+  
+    body {
+      overflow-y: scroll;
+    }
+
+    .DOCS-box {
+      width: 80%;
+      max-width: 40rem;
+      overflow-y: scroll;
+      display: block;
+      padding: 2rem;
+      margin: 0 auto; 
+  }
+
+  .DOCS-content {
+     max-height: 16px;
+  }
+
+  .DOCS-tabs button:hover::after {
+    height: 100%;
+    width: 1%;
+    color: rgba(27,27,27,255);
+  }
+
 }
