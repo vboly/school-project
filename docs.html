@@ -30,7 +30,7 @@
         <nav>
             <a href="index.html"  id="nav-panel">Panel</a>
             <a href="store.html"  id="nav-store">Store</a>
-            <a class="active"     id="nav-DOCS">docs</a>
+            <a class="active"     id="nav-DOCS">Docs</a>
             <a href="editor.html" id="nav-editor">Editor</a>
         </nav>
         <!--DOCS-->
@@ -40,7 +40,7 @@
                 <button id = "Info">Info</button>
                 <button id = "Base64">Base64</button>
                 <button id = "FFI">FFI</button>
-                <button id = "Desktop">Desktop</button>
+                <button id = "Imgui">Imgui</button>
             </div>
             <!--Content of pages-->
             <div class="DOCS-content" id="DOCS-content">
@@ -53,15 +53,38 @@
                     <p>Decodes your base64.</p>
                 </div>
                 <div style="Display: none" class="DOCS-item" id="Info-Content">
-                     <h2>Lorem Ipsum222222</h2>
-                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                    <h2>Project Information</h2>
+                    <p>This project is designed to the scripting language LUA to summarize the difficult parts of softare developing.</p>
                 </div>
-                 <div style="Display: none" class="DOCS-item" id="FFI-Content">
-
-                 </div>
-                  <div style="Display: none" class="DOCS-item" id="Desktop-Content">
-
-                  </div>
+                <div style="Display: none" class="DOCS-item" id="FFI-Content">
+                    <h2>FFI library</h2>
+                    <p>The FFI library allows calling external C functions and using C data structures from pure Lua code.</p>
+<pre style="margin: 18px; overflow: hidden;"><code class="language-lua">local ffi = require("ffi")
+ffi.cdef[[
+int printf(const char *fmt, ...);
+]]
+ffi.C.printf("Hello!")
+</code></pre> 
+                    <h2>So, let's pick that apart:</h2>
+                    <p>① Load the FFI library.</p>
+                    <p>② Add a C declaration for the function. The part inside the double-brackets (in green) is just standard C syntax.</p>
+                    <p>③ Call the named C function — Yes, it's that simple!</p>
+                </div>
+                <div style="Display: none" class="DOCS-item" id="Imgui-Content">
+                    <h2>Imgui library</h2>
+                    <p>Create graphical user interferencs for applications using the imgui library.</p>
+                    <pre style="margin: 18px;"><code class="language-lua">imgui.Begin("Name", p_opened)</code></pre>  
+                    <h2>Begin</h2>
+                    <p>Creates the imgui window.</p>
+                    <p>"Name" - Title of the imgui window.</p>
+                    <p>p_opened - Deterimines if the imgui window should be visible.</p>
+                    <pre style="margin: 18px;"><code class="language-lua">bool shoulddraw, bool p_opened</code></pre>  
+                    <p>Shouldraw - Deterimines if the imgui window should be visible on screen.</p>
+                    <p>p_opened - Returns false when the imngui window is closed otherwise true.</p>
+                    <pre style="margin: 18px;"><code class="language-lua">imgui.SetNextWindowPos(100, 50)</code></pre>  
+                    <h2>SetNextWindowPos</h2>
+                    <p>Sets the position of the next imgui window using vector2 coordinates.</p>
+                </div>
             </div>
         </div>
         <!--copyright-->
