@@ -1,7 +1,5 @@
 // logic
 
-
-
 // particles configuration
 
 particlesJS("particles-js", {
