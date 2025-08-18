@@ -10,5 +10,4 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById(tab.id + '-Content').style.display = "Block"
     });
   });
-  
 });

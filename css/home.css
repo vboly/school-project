@@ -1,0 +1,107 @@
+/* classes */
+
+.home-box {
+  background-color: rgba(250,250,250,0.2);
+  padding: 2rem; 
+  border-radius: 1rem; 
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  width: 100%;
+  max-width: 40rem;
+  margin: auto;
+  min-height: 21.5rem;
+  max-height: 21.5rem;
+  align-items: center; 
+  pointer-events: auto;
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  backdrop-filter: blur(4px);
+  justify-content: space-evenly; 
+  gap: 18px
+}
+
+.home-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px
+}
+
+.home-item {
+    background-color: rgba(255,255,255,0.8);
+    padding: 1rem; 
+    border-radius: 1rem; 
+    border: rgba(230,230,230,255) 1px solid;
+    width: 100%;
+    height: 100%;
+    max-width: 14rem;
+    max-height: 5rem;
+    justify-content: space-around; 
+    pointer-events: auto;
+    z-index: 2;
+}
+
+.home-options {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+}
+
+img {
+  display: block; 
+  max-height: 4rem;
+  min-height: 4rem;
+  object-fit: cover;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+button {
+    min-width: 8rem; 
+    font-family: 'Noto Sans Thai UI', Arial, sans-serif;
+    background-color: #ff8447;
+    color: #fff;              
+    font-weight: 700;         
+    padding: 0.75rem 2rem;    
+    border-radius: 9999px;     
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    max-height: 3rem;
+    transition: background-color 0.3s ease-in-out; 
+}
+
+button:hover {
+  animation: pulse-bg 0.5s ease-in-out;
+}
+
+@keyframes pulse-bg {
+  0%, 100% {
+    transform: scale(1);
+  } 
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.home-text {
+    text-align: center;
+    align-items: center;
+}
+
+@media (max-width: 750px) {
+  .home-box {
+    width: 80%;
+    max-width: 40rem;
+    padding: 2rem;
+    overflow-y: scroll;
+  }
+
+  .home-info, .home-options {
+    gap: 12px;
+  }
+}

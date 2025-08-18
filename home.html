@@ -7,12 +7,12 @@
     </head>
     <!--styles-->
     <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="css/home.css">
     <!--scripts-->
     <div id="particles-js"></div>
     <script src="js/lib/particles.js"></script>
     <script src="js/app.js"></script>  
-    <script src="js/panel.js"></script>
+    <script src="js/home.js"></script>  
     <script src="https://kit.fontawesome.com/bd7f19fc80.js" crossorigin="anonymous"></script>
     <!-- body-->
     <audio id="musicplr" autoplay loop hidden>
@@ -26,28 +26,37 @@
         <nav>
             <a class="active"     id="nav-panel">Home</a>
             <a href="store.html"  id="nav-store">Store</a>
-            <a href="docs.html"    id="nav-DOCS">Docs</a>
+            <a href="docs.html"   id="nav-DOCS">Docs</a>
             <a href="editor.html" id="nav-editor">Editor</a>
         </nav>
         <!--login-->
-        <div class="login-box" id = "login-box">
-            <div class="login-frame">
-                <!-- logo -->
-                <div class="logo-box">
-                    <img src="assets/logo.png" alt="Logo"> 
-                </div>
-                <!-- login forum -->
-                <h1></h1>
-                <input type="text" placeholder="Username" id="User-field" required>
-                <input type="password" placeholder="Password" id="User-login" required>
-                <h1></h1>
-                <button class="login-but" type="submit" id ="log-but">Login</button>
+        <div class="home-box" id = "home-box">
+            <div class = "home-text">
+                <h2 id = "home-text">Welcome, Username!</h2>
+                <p>Download the software and view your progress.</p>
             </div>
-           <!-- welcome info-->
-           <div class="welcome-frame">
-               <p style="font-size: 24px;" id ="welcome-top">Please login to continue</p>
-               <p style="font-size: 14px;" id="welcome-bottom">Don't have an account? <a id="signup-link">Sign up now!</a></p>
-           </div>
+            <div class = "home-info">
+                <div class="home-item">
+                    <h2>Compilations</h2>
+                    <p>3124</p>
+                </div>
+                <div class="home-item">
+                    <h2>Downloads</h2>
+                    <p>59</p>
+                </div>
+                <div class="home-item">
+                    <h2>Time spent</h2>
+                    <p>120 hours</p>
+                </div>
+                <div class="home-item">
+                    <h2>Last Login</h2>
+                    <p>3 Days</p>
+                </div>
+            </div>
+            <div class = "home-options">
+                <button id="download-but">Download</button>
+                <button id="logout-but">Logout</button>
+            </div>
         </div>
         <!--copyright-->
         <nav>

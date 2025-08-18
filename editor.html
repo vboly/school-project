@@ -33,7 +33,7 @@
     <body>
         <!--navigation-->
         <nav>
-            <a href="index.html" id="nav-panel">Panel</a>
+            <a href="index.html" id="nav-panel">Home</a>
             <a href="store.html" id="nav-store">Store</a>
             <a href="docs.html"  id="nav-DOCS">Docs</a>
             <a class="active"    id="nav-editor">Editor</a>
@@ -42,10 +42,10 @@
         <div class="editor-box">
             <div class="editor-con" id="editor-con"></div>
             <div class="editornav-frame">
-                <button>run</button>
-                <button>save</button>
-                <button>open</button>
-                <button>config</button>
+                <button id ="save">save</button>
+                <button type="file" id="open">open</button>
+                <button id="clear">clear</button>
+                <input type="file" id="lua_file" style="display: none;"/>
             </div>
         </div>
         <!--copyright-->
@@ -70,6 +70,35 @@
                 function SetMonacoEditorText(text) {
                     editor.setValue(text);
                 }
+
+                document.getElementById("open").addEventListener('click', (e) => {
+                    lua_file.click();
+                });
+
+                document.getElementById("clear").addEventListener('click', (e) => {
+                    SetMonacoEditorText("");
+                });
+
+                document.getElementById("save").addEventListener('click', (e) => {
+                    const link = document.createElement("a");
+                    const file = new Blob([GetMonacoEditorText()], { type: 'text/plain' });
+                    link.href = URL.createObjectURL(file);
+                    link.download = "code.lua";
+                    link.click();
+                    URL.revokeObjectURL(link.href);
+                });
+
+                lua_file.addEventListener('change', (event) => {
+                    const file = event.target.files[0];
+                     if (file) {
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            const LUA = e.target.result;
+                            SetMonacoEditorText(LUA);
+                        };
+                        reader.readAsText(file); 
+                    }
+                });
             });
         </script>
     </body>
