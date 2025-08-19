@@ -44,7 +44,7 @@ h2 {
 .DOCS-tabs button {
   background-color: rgba(250,250,250,0.2);
   box-shadow: 0 8px 32px rgba(0,0,0,0.14);
-    border: rgba(230,230,230,255) 1px solid;
+  border: rgba(230,230,230,255) 1px solid;
   color: rgba(92, 92, 92, 255);
   text-decoration: none;
   font-weight: bold;
@@ -119,6 +119,7 @@ h2 {
   text-align: left;
   min-width: 90%;
 }
+
 
 @media (max-width: 750px) {
   
