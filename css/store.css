@@ -1,6 +1,4 @@
-body {
-  min-height: 85vh; 
-}
+/* classes */
 
 .store-box {
   background-color: rgba(250,250,250,0.2);
@@ -93,6 +91,8 @@ body {
   font-family: 'Noto Sans Thai UI', Arial, sans-serif;
 }
 
+/* elements */
+
 button {
   font-family: 'Noto Sans Thai UI', Arial, sans-serif;
   background-color: #ff8447;
@@ -111,6 +111,8 @@ button:hover {
   animation: pulse-bg 0.5s ease-in-out;
 }
 
+/* animations */
+
 @keyframes pulse-bg {
   0%, 100% {
     transform: scale(1);
@@ -119,6 +121,8 @@ button:hover {
     transform: scale(1.05);
   }
 }
+
+/* media */
 
 @media (max-width: 750px) {
   .store-box {

@@ -1,3 +1,5 @@
+/* classes */
+
 .editor-box {
   background-color: rgba(250,250,250,0.2);
   padding: 2rem; 
@@ -50,6 +52,8 @@
   position: relative;
 }
 
+/* elements */
+
 button {
   font-family: 'Noto Sans Thai UI', Arial, sans-serif;
   background-color: #ff8447;
@@ -69,15 +73,6 @@ button:hover {
   animation: pulse-bg 0.5s ease-in-out;
 }
 
-@keyframes pulse-bg {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-         transform: scale(1.05);
-     }
-}
-
 img {
   width: 300%;
   height: 300%;
@@ -85,6 +80,19 @@ img {
   max-width: 2rem;
   object-fit: cover;
 } 
+
+/* keyframe */
+
+@keyframes pulse-bg {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/*  media */
 
 @media (max-width: 750px) {
   .editor-box {
@@ -117,7 +125,3 @@ img {
     overflow-y: scroll;
   }
 }
-
-body {
-  min-height: 85vh; 
-} 

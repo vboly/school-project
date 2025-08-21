@@ -113,6 +113,8 @@ particlesJS("particles-js", {
   "retina_detect": true,
 });
 
+// hover effect
+
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('nav');
   const active = document.querySelector('a.active');
@@ -128,21 +130,4 @@ document.addEventListener('DOMContentLoaded', () => {
         active.classList.add('active');
       }
   });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const musicplr = document.getElementById('musicplr');
-  const EnterBox = document.getElementById('EnterBox')
-
-    if(localStorage.getItem('Entered') === 'true') {
-      EnterBox.style.display = 'none';
-      EnterBox.style.visibility = 'hidden';
-    }
-
-    EnterBox.addEventListener('click', (event) => {
-      EnterBox.style.display = 'none';
-      EnterBox.style.visibility = 'hidden';
-      musicplr.play()
-      localStorage.setItem('Entered', 'true');
-    });
 });
