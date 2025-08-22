@@ -1,6 +1,10 @@
+//checking if we are already logged in
+
 if(localStorage.getItem("LoginLIST")) {
   window.location.replace('home.html');
 }
+
+//panel logic
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const log_box        = document.getElementById('login-box');
@@ -10,12 +14,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   var signup = false;
 
+  // we check to see if we have a existing database
+
   if(!localStorage.getItem("UserDB")) {
     localStorage.setItem('UserDB', JSON.stringify({
       admin: "123456789",
       Username: "Password"
     }));
   }
+
+  // signup/login mode change
 
   welcome_bottom.addEventListener('click', (e) => {
     if(e.target.id == 'signup-link') {
@@ -36,6 +44,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
       signup = false;
     }
   });
+
+  // signup/login logic
 
   log_but.addEventListener('click', (e) => {
     const userDB = JSON.parse(localStorage.getItem('UserDB'));

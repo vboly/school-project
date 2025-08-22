@@ -142,6 +142,7 @@ button:hover {
   .store-item {
     flex-direction: column;
     align-items: center;
+    min-height: auto;
     max-height: none;
   }
   

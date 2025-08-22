@@ -1,3 +1,5 @@
+// tab system for docs
+
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.DOCS-tabs');
   const tabslist = document.querySelectorAll('.DOCS-tabs button');

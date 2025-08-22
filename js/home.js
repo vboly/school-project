@@ -1,3 +1,5 @@
+// home logic
+
 document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("home-text").textContent = "Welcome, " + localStorage.getItem("LoginLIST") + "!"
     document.getElementById('logout-but').addEventListener('click', (e) => {
